@@ -139,13 +139,15 @@
             // 
             // btn_qltaikhoan
             // 
+            this.btn_qltaikhoan.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_qltaikhoan.Font = new System.Drawing.Font("Times New Roman", 10.2F);
-            this.btn_qltaikhoan.Location = new System.Drawing.Point(632, 12);
+            this.btn_qltaikhoan.Location = new System.Drawing.Point(615, 6);
             this.btn_qltaikhoan.Name = "btn_qltaikhoan";
-            this.btn_qltaikhoan.Size = new System.Drawing.Size(156, 37);
+            this.btn_qltaikhoan.Size = new System.Drawing.Size(182, 37);
             this.btn_qltaikhoan.TabIndex = 8;
-            this.btn_qltaikhoan.Text = "Quản lý tài khoản";
-            this.btn_qltaikhoan.UseVisualStyleBackColor = true;
+            this.btn_qltaikhoan.Text = "Quản lý nhân viên";
+            this.btn_qltaikhoan.UseVisualStyleBackColor = false;
+            this.btn_qltaikhoan.Click += new System.EventHandler(this.btn_qltaikhoan_Click);
             // 
             // label1
             // 
@@ -162,7 +164,7 @@
             // 
             // txt_phanquyen
             // 
-            this.txt_phanquyen.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txt_phanquyen.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txt_phanquyen.Location = new System.Drawing.Point(13, 9);
             this.txt_phanquyen.Multiline = true;
             this.txt_phanquyen.Name = "txt_phanquyen";

@@ -71,6 +71,18 @@
     <Compile Include="BanHang\hadon1.Designer.cs">
       <DependentUpon>hadon1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChuCuaHang\nhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChuCuaHang\nhanvien.Designer.cs">
+      <DependentUpon>nhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChuCuaHang\PhongBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChuCuaHang\PhongBan.Designer.cs">
+      <DependentUpon>PhongBan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ketnoi\DatabaseHelper.cs" />
     <Compile Include="kho\nhacungcap.cs">
       <SubType>Form</SubType>
@@ -139,6 +151,12 @@
     </Compile>
     <EmbeddedResource Include="BanHang\hadon1.resx">
       <DependentUpon>hadon1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChuCuaHang\nhanvien.resx">
+      <DependentUpon>nhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChuCuaHang\PhongBan.resx">
+      <DependentUpon>PhongBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="kho\nhacungcap.resx">
       <DependentUpon>nhacungcap.cs</DependentUpon>

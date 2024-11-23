@@ -1,4 +1,5 @@
 ﻿using PTTK.BanHang;
+using PTTK.ChuCuaHang;
 using PTTK.ThuNgan;
 using System;
 using System.Collections.Generic;
@@ -105,6 +106,13 @@ namespace PTTK
         private void btn_baocao_Click(object sender, EventArgs e)
         {
             ThuNgan2 f = new ThuNgan2();
+            f.Show();
+            this.Hide();
+        }
+
+        private void btn_qltaikhoan_Click(object sender, EventArgs e)
+        {
+            nhanvien f = new nhanvien();
             f.Show();
             this.Hide();
         }
