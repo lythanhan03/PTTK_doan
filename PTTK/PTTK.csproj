@@ -71,6 +71,12 @@
     <Compile Include="BanHang\hadon1.Designer.cs">
       <DependentUpon>hadon1.cs</DependentUpon>
     </Compile>
+    <Compile Include="BanHang\khachhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BanHang\khachhang.Designer.cs">
+      <DependentUpon>khachhang.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChuCuaHang\nhanvien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </Compile>
     <EmbeddedResource Include="BanHang\hadon1.resx">
       <DependentUpon>hadon1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BanHang\khachhang.resx">
+      <DependentUpon>khachhang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChuCuaHang\nhanvien.resx">
       <DependentUpon>nhanvien.cs</DependentUpon>

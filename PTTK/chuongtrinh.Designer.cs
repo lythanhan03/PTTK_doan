@@ -136,6 +136,7 @@
             this.btn_khachhang.TabIndex = 7;
             this.btn_khachhang.Text = "Xem khách hàng vip";
             this.btn_khachhang.UseVisualStyleBackColor = false;
+            this.btn_khachhang.Click += new System.EventHandler(this.btn_khachhang_Click);
             // 
             // btn_qltaikhoan
             // 

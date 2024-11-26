@@ -30,6 +30,7 @@ namespace PTTK
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Formkho));
             this.btn_themtudong = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dgv_kho1 = new System.Windows.Forms.DataGridView();
@@ -94,7 +95,7 @@ namespace PTTK
             // btn_them
             // 
             this.btn_them.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F);
-            this.btn_them.Location = new System.Drawing.Point(458, 258);
+            this.btn_them.Location = new System.Drawing.Point(485, 269);
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(83, 29);
             this.btn_them.TabIndex = 3;
@@ -104,28 +105,28 @@ namespace PTTK
             // 
             // txt_masach
             // 
-            this.txt_masach.Location = new System.Drawing.Point(100, 259);
+            this.txt_masach.Location = new System.Drawing.Point(127, 270);
             this.txt_masach.Name = "txt_masach";
             this.txt_masach.Size = new System.Drawing.Size(100, 22);
             this.txt_masach.TabIndex = 4;
             // 
             // txt_tensach
             // 
-            this.txt_tensach.Location = new System.Drawing.Point(100, 323);
+            this.txt_tensach.Location = new System.Drawing.Point(127, 334);
             this.txt_tensach.Name = "txt_tensach";
             this.txt_tensach.Size = new System.Drawing.Size(100, 22);
             this.txt_tensach.TabIndex = 5;
             // 
             // txt_tacgia
             // 
-            this.txt_tacgia.Location = new System.Drawing.Point(312, 261);
+            this.txt_tacgia.Location = new System.Drawing.Point(356, 272);
             this.txt_tacgia.Name = "txt_tacgia";
             this.txt_tacgia.Size = new System.Drawing.Size(100, 22);
             this.txt_tacgia.TabIndex = 6;
             // 
             // txt_soluong
             // 
-            this.txt_soluong.Location = new System.Drawing.Point(312, 323);
+            this.txt_soluong.Location = new System.Drawing.Point(356, 334);
             this.txt_soluong.Name = "txt_soluong";
             this.txt_soluong.Size = new System.Drawing.Size(100, 22);
             this.txt_soluong.TabIndex = 7;
@@ -134,7 +135,7 @@ namespace PTTK
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F);
-            this.label2.Location = new System.Drawing.Point(12, 259);
+            this.label2.Location = new System.Drawing.Point(27, 272);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 18);
             this.label2.TabIndex = 8;
@@ -144,7 +145,7 @@ namespace PTTK
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F);
-            this.label3.Location = new System.Drawing.Point(12, 329);
+            this.label3.Location = new System.Drawing.Point(27, 340);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 18);
             this.label3.TabIndex = 9;
@@ -154,7 +155,7 @@ namespace PTTK
             // 
             this.label.AutoSize = true;
             this.label.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F);
-            this.label.Location = new System.Drawing.Point(224, 259);
+            this.label.Location = new System.Drawing.Point(251, 270);
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(59, 18);
             this.label.TabIndex = 10;
@@ -164,7 +165,7 @@ namespace PTTK
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F);
-            this.label5.Location = new System.Drawing.Point(224, 329);
+            this.label5.Location = new System.Drawing.Point(251, 340);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 18);
             this.label5.TabIndex = 11;
@@ -174,7 +175,7 @@ namespace PTTK
             // btn_sua
             // 
             this.btn_sua.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F);
-            this.btn_sua.Location = new System.Drawing.Point(458, 317);
+            this.btn_sua.Location = new System.Drawing.Point(485, 328);
             this.btn_sua.Name = "btn_sua";
             this.btn_sua.Size = new System.Drawing.Size(83, 34);
             this.btn_sua.TabIndex = 12;
@@ -185,7 +186,7 @@ namespace PTTK
             // btn_xoa
             // 
             this.btn_xoa.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F);
-            this.btn_xoa.Location = new System.Drawing.Point(459, 371);
+            this.btn_xoa.Location = new System.Drawing.Point(486, 382);
             this.btn_xoa.Name = "btn_xoa";
             this.btn_xoa.Size = new System.Drawing.Size(82, 34);
             this.btn_xoa.TabIndex = 13;
@@ -232,7 +233,7 @@ namespace PTTK
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F);
-            this.label4.Location = new System.Drawing.Point(206, 379);
+            this.label4.Location = new System.Drawing.Point(250, 390);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 18);
             this.label4.TabIndex = 18;
@@ -240,7 +241,7 @@ namespace PTTK
             // 
             // txt_nxb
             // 
-            this.txt_nxb.Location = new System.Drawing.Point(312, 377);
+            this.txt_nxb.Location = new System.Drawing.Point(356, 388);
             this.txt_nxb.Name = "txt_nxb";
             this.txt_nxb.Size = new System.Drawing.Size(100, 22);
             this.txt_nxb.TabIndex = 19;
@@ -249,7 +250,7 @@ namespace PTTK
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F);
-            this.label6.Location = new System.Drawing.Point(0, 379);
+            this.label6.Location = new System.Drawing.Point(27, 390);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(101, 18);
             this.label6.TabIndex = 20;
@@ -257,14 +258,14 @@ namespace PTTK
             // 
             // txt_matheloai
             // 
-            this.txt_matheloai.Location = new System.Drawing.Point(100, 375);
+            this.txt_matheloai.Location = new System.Drawing.Point(127, 386);
             this.txt_matheloai.Name = "txt_matheloai";
             this.txt_matheloai.Size = new System.Drawing.Size(100, 22);
             this.txt_matheloai.TabIndex = 21;
             // 
             // txt_giaban
             // 
-            this.txt_giaban.Location = new System.Drawing.Point(312, 416);
+            this.txt_giaban.Location = new System.Drawing.Point(356, 427);
             this.txt_giaban.Name = "txt_giaban";
             this.txt_giaban.Size = new System.Drawing.Size(100, 22);
             this.txt_giaban.TabIndex = 22;
@@ -273,7 +274,7 @@ namespace PTTK
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(229, 416);
+            this.label7.Location = new System.Drawing.Point(249, 428);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 19);
             this.label7.TabIndex = 23;
@@ -283,6 +284,7 @@ namespace PTTK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 473);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txt_giaban);

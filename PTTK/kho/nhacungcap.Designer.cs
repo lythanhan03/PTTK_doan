@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(nhacungcap));
             this.label1 = new System.Windows.Forms.Label();
             this.btn_them = new System.Windows.Forms.Button();
             this.btn_sua = new System.Windows.Forms.Button();
@@ -169,6 +170,7 @@
             // 
             // dgv_ncc
             // 
+            this.dgv_ncc.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgv_ncc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_ncc.Location = new System.Drawing.Point(117, 71);
             this.dgv_ncc.Name = "dgv_ncc";
@@ -177,12 +179,12 @@
             this.dgv_ncc.Size = new System.Drawing.Size(580, 188);
             this.dgv_ncc.TabIndex = 17;
             this.dgv_ncc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ncc_CellClick);
-            
             // 
             // nhacungcap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dgv_ncc);
             this.Controls.Add(this.label6);

@@ -23,7 +23,10 @@ namespace PTTK
         public event EventHandler Dangxuat;
         private void btn_dangxuat_Click(object sender, EventArgs e)
         {
-            Dangxuat(this, new EventArgs());
+            //Dangxuat(this, new EventArgs());
+            dangnhap f = new dangnhap();
+            f.Show();
+            this.Hide();
         }
 
         private void btn_thoat1_Click(object sender, EventArgs e)
@@ -113,6 +116,13 @@ namespace PTTK
         private void btn_qltaikhoan_Click(object sender, EventArgs e)
         {
             nhanvien f = new nhanvien();
+            f.Show();
+            this.Hide();
+        }
+
+        private void btn_khachhang_Click(object sender, EventArgs e)
+        {
+            khachhang f = new khachhang();
             f.Show();
             this.Hide();
         }
