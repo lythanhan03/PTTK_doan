@@ -55,13 +55,12 @@ namespace PTTK.ThuNgan
                 Excel.Worksheet worksheet = workbook.ActiveSheet;
                 worksheet.Name = "Báo cáo doanh thu";
 
-                // Xuất tiêu đề cột
+               
                 for (int i = 1; i < dgv_thungan2.Columns.Count + 1; i++)
                 {
                     worksheet.Cells[1, i] = dgv_thungan2.Columns[i - 1].HeaderText;
                 }
 
-                // Xuất dữ liệu
                 for (int i = 0; i < dgv_thungan2.Rows.Count; i++)
                 {
                     for (int j = 0; j < dgv_thungan2.Columns.Count; j++)
@@ -78,7 +77,7 @@ namespace PTTK.ThuNgan
                     }
                 }
 
-                // Lưu file
+                
                 SaveFileDialog saveFileDialog = new SaveFileDialog
                 {
                     Filter = "Excel files (*.xlsx)|*.xlsx",
@@ -91,7 +90,7 @@ namespace PTTK.ThuNgan
                     MessageBox.Show("Xuất báo cáo thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
-                // Đóng Excel
+             
                 workbook.Close();
                 System.Runtime.InteropServices.Marshal.ReleaseComObject(workbook);
                 excel.Quit();

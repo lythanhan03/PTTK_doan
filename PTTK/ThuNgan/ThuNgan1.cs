@@ -33,16 +33,16 @@ namespace PTTK.ThuNgan
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
-                        // Thêm tham số cho stored procedure
+                        
                         cmd.Parameters.AddWithValue("@Thang", thang);
                         cmd.Parameters.AddWithValue("@Nam", nam);
 
-                        // Thực thi lệnh và đổ dữ liệu vào DataTable
+                        
                         SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                         DataTable dataTable = new DataTable();
                         adapter.Fill(dataTable);
 
-                        // Hiển thị kết quả trên DataGridView
+                       
                         dgv_thungan.DataSource = dataTable;
                     }
                 }
@@ -82,10 +82,10 @@ namespace PTTK.ThuNgan
 
         private void btn_timkiem_Click(object sender, EventArgs e)
         {
-            // Kiểm tra nếu người dùng đã nhập một số hợp lệ
+            
             if (int.TryParse(txt_Mindoanhthu.Text, out int minDoanhThu))
             {
-                // Gọi hàm để tải dữ liệu khách hàng có doanh thu cao với giá trị từ người dùng
+               
                 LoadKhachHangDoanhThuCao(minDoanhThu);
             }
             else

@@ -36,7 +36,7 @@ namespace PTTK.BanHang
         {
             try
             {
-                // Kiểm tra dữ liệu trước khi thực hiện
+               
                 if (string.IsNullOrWhiteSpace(txt_makh.Text) || string.IsNullOrWhiteSpace(txt_tenkh.Text) ||
                     string.IsNullOrWhiteSpace(txt_diachi.Text) || string.IsNullOrWhiteSpace(txt_sdt.Text))
                 {
@@ -50,7 +50,7 @@ namespace PTTK.BanHang
                     return;
                 }
 
-                // Thực thi thêm dữ liệu
+                
                 using (SqlConnection conn = new SqlConnection(DatabaseHelper.ConnectionString))
                 {
                     conn.Open();
@@ -64,13 +64,13 @@ namespace PTTK.BanHang
                     cmd.ExecuteNonQuery();
                 }
 
-                // Tải lại dữ liệu sau khi thêm
+               
                 LoadData();
                 MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                // Hiển thị lỗi nếu có
+               
                 MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -79,7 +79,7 @@ namespace PTTK.BanHang
         {
             try
             {
-                // Kiểm tra dữ liệu nhập
+                
                 if (string.IsNullOrWhiteSpace(txt_makh.Text))
                 {
                     MessageBox.Show("Vui lòng nhập mã khách hàng cần sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -99,7 +99,7 @@ namespace PTTK.BanHang
                     return;
                 }
 
-                // Thực hiện sửa dữ liệu
+                
                 using (SqlConnection conn = new SqlConnection(DatabaseHelper.ConnectionString))
                 {
                     conn.Open();
@@ -133,14 +133,14 @@ namespace PTTK.BanHang
         {
             try
             {
-                // Kiểm tra dữ liệu nhập
+                
                 if (string.IsNullOrWhiteSpace(txt_makh.Text))
                 {
                     MessageBox.Show("Vui lòng nhập mã khách hàng cần xoá!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
-                // Xác nhận xoá
+               
                 var confirmResult = MessageBox.Show("Bạn có chắc chắn muốn xoá khách hàng này không?", "Xác nhận xoá",
                                                      MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (confirmResult == DialogResult.No)
@@ -148,7 +148,7 @@ namespace PTTK.BanHang
                     return;
                 }
 
-                // Thực hiện xoá dữ liệu
+                
                 using (SqlConnection conn = new SqlConnection(DatabaseHelper.ConnectionString))
                 {
                     conn.Open();
@@ -216,7 +216,7 @@ namespace PTTK.BanHang
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);
 
-                    dgv_khachhang.DataSource = dt; // Hiển thị danh sách khách hàng
+                    dgv_khachhang.DataSource = dt; 
                 }
             }
             catch (Exception ex)

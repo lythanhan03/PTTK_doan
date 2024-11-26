@@ -90,8 +90,8 @@ namespace PTTK
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
-                        // Thêm tham số cho stored procedure
-                        cmd.Parameters.AddWithValue("@maphieunhap", txt_maphieunhap.Text); // Đảm bảo txt_maphieunhap có giá trị hợp lệ
+                        
+                        cmd.Parameters.AddWithValue("@maphieunhap", txt_maphieunhap.Text); 
                         cmd.Parameters.AddWithValue("@masach", txt_masach.Text);
                         cmd.Parameters.AddWithValue("@slnhap", int.Parse(txt_soluongnhap.Text));
                         cmd.Parameters.AddWithValue("@dgnhap", decimal.Parse(txt_dongianhap.Text));

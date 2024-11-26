@@ -54,7 +54,7 @@ namespace PTTK
 
         private void btn_thoatkho_Click(object sender, EventArgs e)
         {
-            // Thoát kho- Quay trở lại chương trình
+            
             chuongtrinh f = new chuongtrinh();
             f.Show();
             this.Hide();
@@ -62,7 +62,7 @@ namespace PTTK
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            // Button Thêm thể loại sách
+            
             themtheloai g = new themtheloai();
             g.Show();
             this.Hide();
@@ -163,18 +163,16 @@ namespace PTTK
        
         private void dgv_kho1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Kiểm tra xem chỉ số dòng có hợp lệ hay không
-            if (e.RowIndex >= 0) // Đảm bảo không phải click vào tiêu đề cột
+            
+            if (e.RowIndex >= 0) 
             {
-                // Lấy thông tin từ dòng đã chọn
                 DataGridViewRow row = dgv_kho1.Rows[e.RowIndex];
-                txt_masach.Text = row.Cells["masach"].Value.ToString(); // Thay "masach" bằng tên cột chính xác
-                txt_matheloai.Text = row.Cells["matheloai"].Value.ToString(); // Thay "matheloai" bằng tên cột chính xác
-                txt_tensach.Text = row.Cells["tensach"].Value.ToString(); // Thay "tensach" bằng tên cột chính xác
-                txt_tacgia.Text = row.Cells["tacgia"].Value.ToString(); // Thay "tacgia" bằng tên cột chính xác
-                txt_nxb.Text = row.Cells["nhaxuatban"].Value.ToString(); // Thay "nhaxuatban" bằng tên cột chính xác
-                txt_soluong.Text = row.Cells["soluong"].Value.ToString(); // Thay "soluong" bằng tên cột chính xác
-                txt_giaban.Text = row.Cells["dgban"].Value.ToString();
+                txt_masach.Text = row.Cells["masach"].Value.ToString(); 
+                txt_matheloai.Text = row.Cells["matheloai"].Value.ToString(); 
+                txt_tensach.Text = row.Cells["tensach"].Value.ToString(); 
+                txt_tacgia.Text = row.Cells["tacgia"].Value.ToString(); 
+                txt_nxb.Text = row.Cells["nhaxuatban"].Value.ToString(); 
+                txt_soluong.Text = row.Cells["soluong"].Value.ToString(); 
             }
         }
         private void dgv_kho1_Leave(object sender, EventArgs e)

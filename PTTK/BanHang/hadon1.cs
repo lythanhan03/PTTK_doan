@@ -42,17 +42,15 @@ namespace PTTK.BanHang
 
         private void dgv_hoadon_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Kiểm tra xem chỉ số dòng có hợp lệ hay không
-            if (e.RowIndex >= 0) // Đảm bảo không phải click vào tiêu đề cột
+            
+            if (e.RowIndex >= 0) 
             {
-                // Lấy thông tin từ dòng đã chọn
+                
                 DataGridViewRow row = dgv_hoadon.Rows[e.RowIndex];
-                txt_masach.Text = row.Cells["masach"].Value.ToString(); // Thay "masach" bằng tên cột chính xác
-                //txt_matheloai.Text = row.Cells["matheloai"].Value.ToString(); // Thay "matheloai" bằng tên cột chính xác
-                txt_tensach.Text = row.Cells["tensach"].Value.ToString(); // Thay "tensach" bằng tên cột chính xác
-                                                                          // txt_tacgia.Text = row.Cells["tacgia"].Value.ToString(); // Thay "tacgia" bằng tên cột chính xác
-                                                                          // txt_nxb.Text = row.Cells["nhaxuatban"].Value.ToString(); // Thay "nhaxuatban" bằng tên cột chính xác
-                                                                          // txt_soluong.Text = row.Cells["soluong"].Value.ToString(); // Thay "soluong" bằng tên cột chính xác
+                txt_masach.Text = row.Cells["masach"].Value.ToString(); 
+                //txt_matheloai.Text = row.Cells["matheloai"].Value.ToString(); 
+                txt_tensach.Text = row.Cells["tensach"].Value.ToString(); 
+                                                                          
                 txt_giaban.Text = row.Cells["dgban"].Value.ToString();
             }
         }
@@ -105,20 +103,19 @@ namespace PTTK.BanHang
                 {
                     conn.Open();
 
-                    // Câu lệnh SQL để tìm kiếm
+                    
                     string query = "SELECT * FROM ChiTietHD WHERE mahoadon = @mahoadon";
 
-                    using (SqlCommand command = new SqlCommand(query, conn)) // Đổi từ "connection" thành "conn"
+                    using (SqlCommand command = new SqlCommand(query, conn)) 
                     {
-                        // Thêm tham số
+                       
                         command.Parameters.AddWithValue("@mahoadon", maHoaDon);
 
-                        // Đọc dữ liệu từ cơ sở dữ liệu
                         SqlDataAdapter adapter = new SqlDataAdapter(command);
                         DataTable dataTable = new DataTable();
                         adapter.Fill(dataTable);
 
-                        // Hiển thị dữ liệu lên DataGridView
+                        
                         dgv_chitiethd.DataSource = dataTable;
 
                         if (dataTable.Rows.Count == 0)
@@ -235,12 +232,12 @@ namespace PTTK.BanHang
 
         private void btn_taohoadon_Click(object sender, EventArgs e)
         {
-            string mahoadon = txt_mahd.Text; // Người dùng nhập mã hóa đơn
-            string manv = txt_manv.Text; // Nhập mã nhân viên từ người dùng
-            string makh = txt_makh.Text; // Nhập mã khách hàng từ người dùng
-            DateTime ngaymuahang = DateTime.Now; // Ngày mua hàng tự động lấy ngày giờ hiện tại
+            string mahoadon = txt_mahd.Text; 
+            string manv = txt_manv.Text; 
+            string makh = txt_makh.Text; 
+            DateTime ngaymuahang = DateTime.Now;
 
-            // Kiểm tra xem mã hóa đơn đã tồn tại chưa
+            
             using (SqlConnection conn = new SqlConnection(DatabaseHelper.ConnectionString))
             {
                 conn.Open();
@@ -255,9 +252,9 @@ namespace PTTK.BanHang
                 }
                 else
                 {
-                    // Thêm dữ liệu vào bảng HoaDon
+                    
                     string query = "INSERT INTO HoaDon (mahoadon, manv, makh, ngaymuahang, tongtien) " +
-                                   "VALUES (@mahoadon, @manv, @makh, @ngaymuahang, 0)"; // tongtien là 0 khi tạo hóa đơn mới
+                                   "VALUES (@mahoadon, @manv, @makh, @ngaymuahang, 0)"; 
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@mahoadon", mahoadon);
                     cmd.Parameters.AddWithValue("@manv", manv);
@@ -273,27 +270,27 @@ namespace PTTK.BanHang
 
         private void btn_capnhathd_Click(object sender, EventArgs e)
         {
-            string mahoadon = txt_mahd.Text; // Lấy mã hóa đơn từ textbox
+            string mahoadon = txt_mahd.Text; 
 
             using (SqlConnection conn = new SqlConnection(DatabaseHelper.ConnectionString))
             {
                 conn.Open();
 
-                // Gọi stored procedure CalculateTotalAmount
+             
                 SqlCommand cmd = new SqlCommand("TongTienHoaDon", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@mahoadon", mahoadon);
 
-                // Thực thi và lấy kết quả trả về (tổng tiền)
+                
                 var result = cmd.ExecuteScalar();
 
-                // Kiểm tra nếu có giá trị trả về
+                
                 if (result != DBNull.Value)
                 {
                     int tongtien = Convert.ToInt32(result);
                     MessageBox.Show("Tổng tiền hóa đơn: " + tongtien.ToString("C"));
 
-                    // Cập nhật lại dữ liệu trên DataGridView nếu cần
+                    
                     LoadHoaDonData();
                 }
                 else
@@ -304,7 +301,7 @@ namespace PTTK.BanHang
         }
         private void LoadHoaDonData()
         {
-            // Tải dữ liệu hóa đơn từ bảng HoaDon và hiển thị lên DataGridView
+           
             using (SqlConnection conn = new SqlConnection(DatabaseHelper.ConnectionString))
             {
                 conn.Open();
@@ -313,7 +310,7 @@ namespace PTTK.BanHang
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
-                // Gán dữ liệu vào DataGridView
+                
                 dgv_hoadon2.DataSource = dt;
             }
         }

@@ -21,7 +21,7 @@ namespace PTTK
 
         private void btn_thoatkho_Click(object sender, EventArgs e)
         {
-            // Thoát kho- Quay trở lại chương trình
+           
             chuongtrinh f = new chuongtrinh();
             f.Show();
             this.Hide();
@@ -41,12 +41,12 @@ namespace PTTK
                 try
                 {
                     conn.Open();
-                    // Chỉ chọn các cột mã sách, tên sách và số lượng
+                    
                     string query = "SELECT masach, tensach, soluong FROM Sach";
                     SqlDataAdapter da = new SqlDataAdapter(query, conn);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
-                    dgv_kho2.DataSource = dt; // Hiển thị dữ liệu lên DataGridView
+                    dgv_kho2.DataSource = dt; 
                 }
                 catch (Exception ex)
                 {
